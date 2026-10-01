@@ -1,181 +1,225 @@
-# Bank Management System — Version 2
+# Bank Management System
 
 ![C++](https://img.shields.io/badge/C%2B%2B-Console%20Application-blue)
+![OOP](https://img.shields.io/badge/Design-Object--Oriented-green)
 ![Authentication](https://img.shields.io/badge/Authentication-Login-orange)
-![Authorization](https://img.shields.io/badge/Authorization-Permissions-green)
+![Authorization](https://img.shields.io/badge/Authorization-Permissions-purple)
 ![File Handling](https://img.shields.io/badge/File%20Handling-fstream-orange)
 
-A console-based C++ banking system enhanced with user authentication, permission-based authorization, and user management.
+A console-based C++ banking system developed through three progressive versions, evolving from a procedural client management application into an object-oriented banking system with authentication, authorization, money transfers, transaction logging, and currency exchange.
 
 ---
 
-## 📌 Overview
+## 📌 Project Overview
 
-This version builds on the core banking functionality introduced in **Bank-System-1** and introduces a user management system with authentication and authorization.
+This repository contains the complete evolution of the Bank Management System across three versions.
 
-Users must log in before accessing the application, and different permissions can be assigned to control access to specific operations.
+Each version builds on the previous one, introducing new functionality and applying additional programming concepts.
 
----
-
-## ✨ Features
-
-### 👤 Client Management
-
-The system continues to provide:
-
-- Add new clients
-- Display all clients
-- Find clients by account number
-- Update client information
-- Delete clients
-
-### 💰 Banking Transactions
-
-The system supports:
-
-- Deposit money
-- Withdraw money
-- View total balances
-
-### 👥 User Management
-
-Authorized users can manage system users through:
-
-- Add new users
-- Display users
-- Find users
-- Update users
-- Delete users
-
-Each user contains information such as:
-
-- Username
-- Password
-- Permissions
-
-### 🔐 Authentication
-
-Users must log in using:
-
-- Username
-- Password
-
-before accessing the main application.
-
-The system validates the entered credentials and loads the corresponding user information.
-
-### 🛡️ Authorization
-
-Access to system operations is controlled using user permissions.
-
-Available permissions include:
-
-- Show Clients
-- Add Client
-- Delete Client
-- Update Client
-- Find Client
-- Transactions
-- Manage Users
-
-Users can receive full access or a selected set of permissions.
-
-### ⚙️ Permission Management
-
-Permissions are represented using **bitwise flags**, allowing multiple permissions to be combined into a single permissions value.
-
-Before protected operations are performed, the system checks whether the current user has the required permission.
+The project started with basic client management and banking transactions, then introduced authentication and authorization, and finally evolved into an Object-Oriented application with multiple modules and reusable classes.
 
 ---
 
-## 🧰 Technologies & Concepts
+## 🚀 Project Evolution
 
-| Technology / Concept | Usage |
-|---|---|
-| **C++** | Core programming language |
-| **Structures** | Representing clients and users |
-| **STL `vector`** | Managing records |
-| **`fstream`** | Reading and writing files |
-| **Functions** | Organizing application logic |
-| **File Handling** | Persistent data storage |
-| **Authentication** | User login and credential validation |
-| **Authorization** | Controlling access to operations |
-| **Bitwise Operators** | Combining and checking permissions |
-| **Input Validation** | Handling invalid user input |
-| **Console UI** | Menu-driven interaction |
+| Version | Main Focus | Key Additions |
+|---|---|---|
+| **Bank-System-1** | Core Banking System | Client CRUD, transactions, file persistence |
+| **Bank-System-2** | Authentication & Authorization | User management, login, permissions |
+| **Bank-System-3-OOP** | Object-Oriented Design | OOP architecture, transfers, logs, currency exchange |
+
+### Version 1 — Core Banking System
+
+The first version focuses on the fundamental functionality of a banking application.
+
+It includes:
+
+- Client management
+- CRUD operations
+- Deposit and withdrawal
+- Total balances
+- File-based data persistence
+
+### Version 2 — Authentication & Authorization
+
+The second version extends the system by introducing user accounts and access control.
+
+It adds:
+
+- User management
+- User authentication
+- Permission-based authorization
+- Bitwise permission flags
+- Separate client and user data storage
+
+### Version 3 — Object-Oriented Design
+
+The third version represents a major redesign of the system using Object-Oriented Programming.
+
+It introduces:
+
+- OOP-based architecture
+- Inheritance and encapsulation
+- Money transfers
+- Transfer logging
+- Login registration
+- Currency exchange
+- Reusable utility classes
+- Separate application screens
 
 ---
 
-## 📂 Project Structure
+## ✨ Overall Features
+
+Across the three versions, the system includes:
+
+- 👤 Client Management
+- 💰 Banking Transactions
+- 👥 User Management
+- 🔐 Authentication
+- 🛡️ Authorization
+- 🔄 Money Transfers
+- 📋 Transfer Logging
+- 📝 Login Register
+- 💱 Currency Exchange
+- 💾 File-Based Data Persistence
+- 🖥️ Console-Based User Interface
+
+---
+
+## 🧠 Concepts Covered
+
+This project was developed to apply and connect several C++ programming concepts in a complete application.
+
+### Programming & Data Structures
+
+- C++ fundamentals
+- Structures
+- Classes and Objects
+- STL `vector`
+- Functions
+- Templates
+- File Handling
+- String Processing
+
+### Object-Oriented Programming
+
+- Encapsulation
+- Inheritance
+- Base and derived classes
+- Separation of responsibilities
+- Reusable classes
+
+### Application Development
+
+- CRUD operations
+- Authentication
+- Authorization
+- Permission management
+- Bitwise operations
+- Input validation
+- Data persistence
+- Date and time handling
+- Console application design
+
+---
+
+## 📂 Repository Structure
 
 ```text
-Bank-System-2/
+Bank-System/
 │
-├── main.cpp
-├── Clients.txt
-├── Users.txt
+├── Bank-System-1/
+│   ├── main.cpp
+│   ├── Clients.txt
+│   └── README.md
+│
+├── Bank-System-2/
+│   ├── main.cpp
+│   ├── Clients.txt
+│   ├── Users.txt
+│   └── README.md
+│
+├── Bank-System-3-OOP/
+│   ├── Core/
+│   ├── Lib/
+│   ├── Screens/
+│   ├── Global.h
+│   ├── main.cpp
+│   └── README.md
+│
 └── README.md
 ```
 
 ---
 
-## 💾 Data Storage
+## 🔗 Project Versions
 
-### Client Data
+### 🏦 Bank-System-1
 
-Client records are stored in:
+The initial version of the banking system, focusing on client management, transactions, and file handling.
 
-`Clients.txt`
+[View Bank-System-1](./Bank-System-1)
 
-### User Data
+### 🔐 Bank-System-2
 
-User records are stored in:
+An enhanced version introducing authentication, authorization, user management, and permission-based access control.
 
-`Users.txt`
+[View Bank-System-2](./Bank-System-2)
 
-Both files are used as persistent storage for the application.
+### 🏗️ Bank-System-3-OOP
 
-Records are converted between structured data and text using a custom delimiter:
+The OOP-based version with a redesigned architecture and additional banking modules.
 
-`#//#`
+[View Bank-System-3-OOP](./Bank-System-3-OOP)
 
 ---
 
-## 🔄 Application Flow
+## 🧰 Technologies
+
+| Technology / Concept  | Usage                     |
+| --------------------- | ------------------------- |
+| **C++**               | Core programming language |
+| **STL `vector`**      | Managing collections      |
+| **`fstream`**         | File input/output         |
+| **OOP**               | Application architecture  |
+| **Inheritance**       | Reusable class design     |
+| **Templates**         | Generic functionality     |
+| **Bitwise Operators** | Permission management     |
+| **File Handling**     | Persistent data storage   |
+| **Date & Time**       | Logs and application data |
+| **Console UI**        | User interaction          |
+
+---
+
+## 📈 Project Progression
+
+The project demonstrates the gradual development of the same banking system:
 
 ```text
-Login
-  ↓
-Validate Username & Password
-  ↓
-Load Current User
-  ↓
-Main Menu
-  ↓
-Check Required Permission
-  ↓
-Perform Operation
-
-This allows different users to access different parts of the system according to their assigned permissions.
+Bank-System-1
+     │
+     │  Client Management
+     │  Transactions
+     │  File Handling
+     ▼
+Bank-System-2
+     │
+     │  Authentication
+     │  Authorization
+     │  User Management
+     ▼
+Bank-System-3-OOP
+     │
+     │  OOP Architecture
+     │  Money Transfers
+     │  Logging
+     │  Currency Exchange
+     ▼
+Object-Oriented Banking System
 ```
 
----
-
-## 🧠 Learning Focus
-
-This version focuses on extending an existing C++ application with authentication and authorization.
-
-Key areas practiced:
-
-- User management
-- Authentication
-- Authorization
-- Permission-based access control
-- Bitwise permission flags
-- File-based persistence
-- Managing multiple data files
-- Input validation
-- Extending an existing application with authentication, authorization, and user management
+Each version was built as an extension of the previous one, allowing the project to evolve alongside the programming concepts being learned.
 
 ---
 
