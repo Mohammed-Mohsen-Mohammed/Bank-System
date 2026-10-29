@@ -143,7 +143,7 @@ public:
 
 		while (clsUser::IsUserExist(UserName))
 		{
-			cout << "\nUser with [" << UserName << "] does not exist.\n";
+			cout << "\nUser with [" << UserName << "] is exist.\n";
 			UserName = _ReadUserName();
 		}
 
