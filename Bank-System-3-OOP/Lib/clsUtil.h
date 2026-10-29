@@ -37,27 +37,22 @@ public:
 		case enCharType::SamallLetter:
 		{
 			return char(RandomNumber(97, 122));
-			break;
 		}
 		case enCharType::CapitalLetter:
 		{
 			return char(RandomNumber(65, 90));
-			break;
 		}
 		case enCharType::SpecialCharacter:
 		{
 			return char(RandomNumber(33, 47));
-			break;
 		}
 		case enCharType::Digit:
 		{
 			return char(RandomNumber(48, 57));
-			break;
 		}
-	defualt:
+		default:
 		{
 			return char(RandomNumber(65, 90));
-			break;
 		}
 		}
 	}
@@ -199,7 +194,7 @@ public:
 
 	static string  EncryptText(string Text, const short& EncryptionKey = 2)
 	{
-		for (int i = 0; i <= Text.length(); i++)
+		for (int i = 0; i < Text.length(); i++)
 		{
 
 			Text[i] = char((int)Text[i] + EncryptionKey);
@@ -211,7 +206,7 @@ public:
 
 	static string  DecryptText(string Text, const short& EncryptionKey = 2)
 	{
-		for (int i = 0; i <= Text.length(); i++)
+		for (int i = 0; i < Text.length(); i++)
 		{
 			Text[i] = char((int)Text[i] - EncryptionKey);
 		}
