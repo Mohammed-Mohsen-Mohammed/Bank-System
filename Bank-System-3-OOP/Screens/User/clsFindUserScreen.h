@@ -40,19 +40,15 @@ public:
 
 		string UserName = _ReadUserName();
 
-		while (!clsUser::IsUserExist(UserName))
-		{
-			cout << "\nUser with [" << UserName << "] does not exist.\n";
-			UserName = _ReadUserName();
-		}
-
 		clsUser User = clsUser::Find(UserName);
 
-		if (!User.IsEmpty())
-			cout << "\nUser Found :-)\n";
-		else
+		if (User.IsEmpty())
+		{
 			cout << "\nUser Wasn't Found :-(\n";
-
+			return;
+		}
+			
+		cout << "\nUser Found :-)\n";
 		_PrintUser(User);
 	}
 
