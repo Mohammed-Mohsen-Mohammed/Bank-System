@@ -45,19 +45,14 @@ public:
 
 		string AccountNumber = _ReadAccountNumber();
 
-		while (!clsBankClient::IsClientExist(AccountNumber))
-		{
-			cout << "\nClient with [" << AccountNumber << "] does not exist.\n";
-			AccountNumber = _ReadAccountNumber();
-		}
-
 		clsBankClient Client = clsBankClient::Find(AccountNumber);
 
-		if (!Client.IsEmpty())
+		if (!Client.IsEmpty()) {
 			cout << "\nClient Found :-)\n";
-		else
-			cout << "\nClient Wasn't Found :-(\n";
-
+			return;
+		}
+		
+		cout << "\nClient Wasn't Found :-(\n";
 		_Print(Client);
 	}
 
