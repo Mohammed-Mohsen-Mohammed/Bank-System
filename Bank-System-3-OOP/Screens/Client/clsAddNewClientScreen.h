@@ -66,9 +66,9 @@ public:
 
 		string AccountNumber = _ReadAccountNumber();
 
-		while (!clsBankClient::IsClientExist(AccountNumber))
+		while (clsBankClient::IsClientExist(AccountNumber))
 		{
-			cout << "\nClient with [" << AccountNumber << "] does not exist.\n";
+			cout << "\nClient with [" << AccountNumber << "] is exist.\n";
 			AccountNumber = _ReadAccountNumber();
 		}
 
