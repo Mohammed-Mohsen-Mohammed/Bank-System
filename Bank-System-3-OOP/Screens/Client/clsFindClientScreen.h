@@ -47,12 +47,12 @@ public:
 
 		clsBankClient Client = clsBankClient::Find(AccountNumber);
 
-		if (!Client.IsEmpty()) {
-			cout << "\nClient Found :-)\n";
+		if (Client.IsEmpty()) {
+			cout << "\nClient Wasn't Found :-(\n";
 			return;
 		}
 		
-		cout << "\nClient Wasn't Found :-(\n";
+		cout << "\nClient Found :-)\n";
 		_Print(Client);
 	}
 
